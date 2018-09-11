@@ -1,0 +1,198 @@
+.background-color-cover {
+	background-color: black;
+	background-size: cover;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -11;
+}
+
+.background-image {
+	background-image: url("images/desktop-background.jpg"), radial-gradient(white, black);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	opacity: .5;
+	position: fixed;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+}
+
+body {
+	font-family: "Open Sans",
+	sans-serif; 
+	font-size: 20px;
+	color: #444;
+	text-align: center;
+	line-height: 1.5;
+	margin: 0;
+}
+
+nav,
+footer {
+	padding: 1% 0;
+	background-color: #aaa;
+	color: white;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: #39373A;
+	color: white;
+	opacity: .8;
+}
+
+.nav-link {
+	display: inline-block;
+	margin: 0 2%;
+	cursor: pointer;
+}
+
+header {
+	padding: 26% 0;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+.full-name-display {
+	color: #FF530D;
+}
+
+section {
+	min-height: 200px;
+	padding: 2% 0;
+	background-color: #bbb;
+}
+
+.about-me {
+	background-color: #39373A;
+	color: white;
+}
+
+.portfolio {
+	background-color: #E39F1C;
+}
+
+.project-item {
+	height: 350px;
+	width: 450px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid black;
+	box-shadow: 2px 2px 14px black;
+	cursor: pointer;
+	z-index: 3;
+
+}
+
+.project1-background {
+	background-image: url("images/desktop-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project2-background {
+	background-image: url("images/desktop-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project3-background {
+	background-image: url("images/desktop-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project4-background {
+	background-image: url("images/desktop-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project1-background::after, .project2-background::after, .project3-background::after, .project4-background::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
+	opacity: 0;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.project1-background:hover, .project2-background:hover, .project3-background:hover, .project4-background:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+	background-color: rgba(0, 0, 0, .7);
+	background-blend-mode: multiply;
+}
+
+.project1-background:hover::after, .project2-background:hover::after, .project3-background:hover::after, .project4-background:hover::after {
+	opacity: 1;
+}
+
+.project-item-content-container {
+	color: white;
+	opacity: 0;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project1-background:hover > .project-item-content-container, .project2-background:hover > .project-item-content-container, .project3-background:hover > .project-item-content-container, .project4-background:hover > .project-item-content-container {
+	opacity: 1;
+}
+
+/*.project-item-content-container:hover {
+	color: white;
+	opacity: 1;
+}*/
+
+.skills {
+	background-color: #7FB0A6;
+}
+
+footer {
+	background-color: #39373A;
+}
+
+@media only screen and (max-width: 640px) {
+
+	.background-image {
+		background-size: contain;
+	}
+
+	header {
+		padding: 16% 0;
+	}
+	h1 {
+		font-size: 22px;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	p {
+		font-size: 12px;
+	}
+}
