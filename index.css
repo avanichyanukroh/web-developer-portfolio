@@ -20,21 +20,18 @@
 	z-index: -10;
 }
 
+.hero-title {
+	color: white;
+	text-shadow: 2px 5px 10px rgba(0, 0, 0, .9);
+}
+
 body {
-	font-family: "Open Sans",
-	sans-serif; 
+	font-family: "Open Sans", sans-serif; 
 	font-size: 20px;
 	color: #444;
 	text-align: center;
 	line-height: 1.5;
 	margin: 0;
-}
-
-nav,
-footer {
-	padding: 1% 0;
-	background-color: #aaa;
-	color: white;
 }
 
 nav {
@@ -43,15 +40,24 @@ nav {
 	left: 0;
 	right: 0;
 	z-index: 10;
-	background-color: #39373A;
+	background: linear-gradient(#39373A, #0F0D0F);
 	color: white;
-	opacity: .8;
+	opacity: .9;
+	box-shadow: 0 5px 15px rgba(255, 255, 255, .3);
 }
 
 .nav-link {
 	display: inline-block;
 	margin: 0 2%;
 	cursor: pointer;
+	padding: 10px 15px 10px;
+	background: none;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav-link:hover {
+	background: rgba(255, 255, 255, .2);
 }
 
 header {
@@ -70,32 +76,39 @@ section {
 	background-color: #bbb;
 }
 
-.about-me {
+.about-me-section {
 	background-color: #39373A;
 	color: white;
 }
 
-.portfolio {
+.about-me-section-title {
+	color: #E39F1C;
+	text-shadow: 2px 5px 10px rgba(0, 0, 0, .8);
+}
+
+.portfolio-section {
 	background-color: #E39F1C;
 }
 
+.portfolio-section-title {
+	color: #39373A;
+	text-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+}
 .project-item {
 	height: 350px;
 	width: 450px;
 	margin: 0 auto;
 	text-align: center;
 	border: 1px solid black;
-	box-shadow: 2px 2px 14px black;
 	cursor: pointer;
 	z-index: 3;
-
 }
 
 .project1-background {
 	background-image: url("images/desktop-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -104,7 +117,7 @@ section {
 	background-image: url("images/desktop-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -113,7 +126,7 @@ section {
 	background-image: url("images/desktop-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -122,7 +135,7 @@ section {
 	background-image: url("images/desktop-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -147,6 +160,7 @@ section {
 	transform: scale(1.2, 1.2);
 	background-color: rgba(0, 0, 0, .7);
 	background-blend-mode: multiply;
+	z-index: 4;
 }
 
 .project1-background:hover::after, .project2-background:hover::after, .project3-background:hover::after, .project4-background:hover::after {
@@ -164,13 +178,12 @@ section {
 	opacity: 1;
 }
 
-/*.project-item-content-container:hover {
-	color: white;
-	opacity: 1;
-}*/
-
-.skills {
+.skills-section {
 	background-color: #7FB0A6;
+}
+
+.skills-section-title {
+	color: #18394A;
 }
 
 footer {
