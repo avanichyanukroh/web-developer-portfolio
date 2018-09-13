@@ -67,13 +67,19 @@ header {
 }
 
 .full-name-display {
+	display: inline-block;
 	color: #FF530D;
 }
 
 section {
 	min-height: 200px;
-	padding: 2% 0;
+	padding: 2% 0 4%;
 	background-color: #bbb;
+
+}
+
+h2 {
+	margin-bottom: 8%;
 }
 
 .about-me-section {
@@ -92,11 +98,17 @@ section {
 
 .portfolio-section-title {
 	color: #39373A;
-	text-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+	text-shadow: 2px 4px 10px rgba(0, 0, 0, .6);
 }
-.project-item {
+.project-item-container {
 	height: 350px;
 	width: 450px;
+	overflow: hidden;
+}
+
+.project-item {
+	height: 100%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
 	border: 1px solid black;
@@ -184,10 +196,12 @@ section {
 
 .skills-section-title {
 	color: #18394A;
+	text-shadow: 2px 4px 10px rgba(0, 0, 0, .6);
 }
 
 footer {
 	background-color: #39373A;
+	color: white;
 }
 
 @media only screen and (max-width: 640px) {

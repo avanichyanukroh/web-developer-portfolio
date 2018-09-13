@@ -4,8 +4,14 @@
 	<title>HTML wireframe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--	 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"> -->
+	<script 
+		src="https://code.jquery.com/jquery-3.3.1.min.js" 
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+		crossorigin="anonymous">
+	</script>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="float-grid.css">
+	<link rel="stylesheet" type="text/css" href="animations.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
@@ -20,65 +26,110 @@
 
 	<main role="main">
 		<header role="banner">
-			<h1 class="hero-title">
-				Hello, I'm <span class="full-name-display">Anawin Vanichyanukroh</span>.
-				<br>
-				I'm a full-stack web developer.
+			<h1 class="hero-title animatedParent">
+				<div class="animated flipInX slower">Hello, I'm <div class="full-name-display animated pulse delay-3000">Anawin Vanichyanukroh</div>.</div>
+				<div class="animated flipInX slower delay-1250">I'm a full-stack web developer.</div>
 			</h1>
 		</header>
 
 		<section class="about-me-section">
-			<div class="row">
-				<h2 class="about-me-section-title">About Me</h2>
-				<p>
-					A Los Angeles/Orange County-based Web Developer.
-					<br><br>
-					I find interests in 
-					learning about
-					new technology,
+			<div class="row animatedParent">
+				<h2 class="about-me-section-title animated bounceInUp">About Me</h2>
+				<div class="animated fadeIn delay-750">
+					<p>I am a Los Angeles/Orange County-based Web Developer.</p>
+				</div>
+				<div class="animated fadeIn delay-1500">
+					<p>
+					I pride myself in self-discipline, thirst for efficiency, and writing, clean, testable code.
+					On my free time currently, I am researching new tools to add to my arsenal
+					from tips and tricks to advance UI/UX designs to learning new frameworks and libraries.
+
+					When I'm not coding, I find interests in
 					playing and creating music,
 					watching and playing sports,
-					teamwork and high-level strategy video games,
+					playing team oriented and high-level strategic video games,
 					and exploring the great outdoors.
-					I pride myself in self-discipline and my thirst for efficiency.
-					I also love sharing experiences, new discoveries, laughs, and smiles. 
+					
+					I also love sharing experiences, new discoveries, laughs, and smiles.
 					Feel free to contact me or browse some of my projects using the links below.
-				</p>
+					</p>
+				</div>
 			</div>
 		</section>
 
 		<section class="portfolio-section">
-			<div class="row">
-				<h2 class="portfolio-section-title">Portfolio</h2>
-					<div class="project-item project1-background col-6">
-						<div class="project-item-content-container">
-							<h2 class="project-item-title">Test Title</h2>
+			<div class="row animatedParent">
+				<h2 class="portfolio-section-title animated bounceInUp">Portfolio</h2>
+					<div class="project-item-container col-6 animated fadeInRight delay-1250">
+						<div class="project-item project1-background">2
+							<div class="project-item-content-container">
+								<h2 class="project-item-title">Test Title</h2>
+							</div>
 						</div>
 					</div>
-					<div class="project-item project2-background col-6">
-						<div class="project-item-content-container">
-							<h2 class="project-item-title">Test Title</h2>
+					<div class="project-item-container col-6 animated fadeInLeft delay-1000">
+						<div class="project-item project2-background">1
+							<div class="project-item-content-container">
+								<h2 class="project-item-title">Test Title</h2>
+							</div>
 						</div>
 					</div>
-					<div class="project-item project3-background col-6">
-						<div class="project-item-content-container">
-							<h2 class="project-item-title">Test Title</h2>
+					<div class="project-item-container col-6 animated fadeInRight delay-1750">
+						<div class="project-item project3-background">4
+							<div class="project-item-content-container">
+								<h2 class="project-item-title">Test Title</h2>
+							</div>
 						</div>
 					</div>
-					<div class="project-item project4-background col-6">
-						<div class="project-item-content-container">
-							<h2 class="project-item-title">Test Title</h2>
+					<div class="project-item-container col-6 animated fadeInLeft delay-1500">
+						<div class="project-item project4-background">3
+							<div class="project-item-content-container">
+								<h2 class="project-item-title">Test Title</h2>
+							</div>
 						</div>
 					</div>
 			</div>
 		</section>
 
 		<section class="skills-section">
-			<div class="row">
-				<h2 class="skills-section-title">Skills</h2>
+			<div class="row animatedParent">
+				<h2 class="skills-section-title animated bounceInUp">Skills</h2>
+				<div>
+					HTML
+				</div>
+				<div>
+					CSS
+				</div>
+				<div>
+					HTML
+				</div>
+				<div>
+					JavaScript
+				</div>
+				<div>
+					React
+				</div>
+				<div>
+					Node.js
+				</div>
+				<div>
+					Other skills
+				</div>
+				<div>
+					Front End frameworks/librarys: jQuery, Redux, Enzyme
+				</div>
+				<div>
+					Back End frameworks/librarys: Express, MongoDB, Mongoose, Mocha, Chai
+				</div>
+				<div>
+					Tools: GitHub, Postman, Chrome DevTools, MLab, Heroku, TravisCI
+				</div>
 			</div>
 		</section>
 	</main>
-	<footer role="content-info">Footer</footer>
+	<footer role="content-info">
+		Footer
+	</footer>
+	<script src="css3-animate-it.js"></script>
 </body>
 </html>
