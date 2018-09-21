@@ -16,15 +16,15 @@
 </head>
 <body>
 	<nav role="navigation">
-		<div class="nav-link">About Me</div>
-		<div class="nav-link">Porfolio</div>
-		<div class="nav-link">Skills</div>
+		<a href="#about-me-section" class="nav-link">About Me</a>
+		<a href="#portfolio-section" class="nav-link">Porfolio</a>
+		<a href="#skills-section" class="nav-link">Skills</a>
 	</nav>
 
 	<div class="background-color-cover"></div>
 	<div class="background-image"></div>
 
-	<main role="main">
+	<main role="main" id="main">
 		<header role="banner">
 			<h1 class="hero-title animatedParent">
 				<div class="animated flipInX slower">Hello, I'm <div class="full-name-display animated pulse delay-3000">Anawin Vanichyanukroh</div>.</div>
@@ -32,7 +32,7 @@
 			</h1>
 		</header>
 
-		<section class="about-me-section">
+		<section class="about-me-section" id="about-me-section">
 			<div class="row animatedParent">
 				<h2 class="about-me-section-title animated bounceInUp">About Me</h2>
 				<div class="animated fadeIn delay-750">
@@ -57,7 +57,7 @@
 			</div>
 		</section>
 
-		<section class="portfolio-section">
+		<section class="portfolio-section" id="portfolio-section">
 			<div class="row animatedParent">
 				<h2 class="portfolio-section-title animated bounceInUp">Portfolio</h2>
 					<div class="project-item-container col-6 animated fadeInRight delay-1250">
@@ -106,27 +106,80 @@
 			</div>
 		</section>
 
-		<section class="skills-section">
+		<section class="skills-section" id="skills-section">
 			<div class="row animatedParent">
 				<h2 class="skills-section-title animated bounceInUp">Skills</h2>
 				<div class="col-12">
 					<div>
-						HTML
-					</div>
-					<div>
-						CSS
-					</div>
-					<div>
-						HTML
-					</div>
-					<div>
-						JavaScript
-					</div>
-					<div>
-						React
-					</div>
-					<div>
-						Node.js
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+							</div>
+							<div class="skill-description-container">
+								<p class="skill-description">Beginner</p>
+							</div>
+							<div class="skill-description-container">
+								<p class="skill-description">Inter</p>
+							</div>
+							<div class="skill-description-container">
+								<p class="skill-description">Proficent</p>
+							</div>
+							<div class="skill-description-container">
+								<p class="skill-description">Advanced</p>
+							</div>
+							<div class="skill-description-container">
+								<p class="skill-description">Expert</p>
+							</div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description">HTML</p>
+							</div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description">CSS</p>
+							</div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description">JavaScript</p>
+							</div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description">React</p>
+							</div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description">Node.js</p>
+							</div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
 					</div>
 					<div>
 						Other skills
