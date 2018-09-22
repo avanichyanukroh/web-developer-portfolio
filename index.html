@@ -13,12 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="float-grid.css">
 	<link rel="stylesheet" type="text/css" href="animations.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-	<nav role="navigation">
-		<a href="#about-me-section" class="nav-link">About Me</a>
-		<a href="#portfolio-section" class="nav-link">Porfolio</a>
-		<a href="#skills-section" class="nav-link">Skills</a>
+	<nav role="navigation" class="animatedParent animateOnce">
+		<a href="#about-me-section" class="nav-link animated flipInX">About Me</a>
+		<a href="#portfolio-section" class="nav-link animated flipInX delay-250">Porfolio</a>
+		<a href="#skills-section" class="nav-link animated flipInX delay-500">Skills</a>
 	</nav>
 
 	<div class="background-color-cover"></div>
@@ -40,8 +41,8 @@
 				</div>
 				<div class="animated fadeIn delay-1500">
 					<p>
-					I pride myself in self-discipline, thirst for efficiency, and writing, clean, testable code.
-					On my free time currently, I am researching new tools to add to my arsenal
+					I pride myself in self-discipline, thirst for efficiency, and writing clean, testable code.
+					In my free time, I am currently researching new tools to add to my arsenal,
 					from tips and tricks to advance UI/UX designs to learning new frameworks and libraries.
 
 					When I'm not coding, I find interests in
@@ -61,16 +62,23 @@
 			<div class="row animatedParent">
 				<h2 class="portfolio-section-title animated bounceInUp">Portfolio</h2>
 					<div class="project-item-container col-6 animated fadeInRight delay-1250">
-						<div class="project-item project2-background">2
+						<div class="project-item project2-background">
 							<div class="project-item-content-container">
-								<h2 class="project-item-title">Test Title</h2>
+								<h2 class="project-item-title">Sabai</h2>
+								<p><i>Sept 2018 - Current</i></p>
+								<p class="project-description-text">A web application that helps health practitioners log patient data. <br><i>(Early stages of development)</i></p>
+								<div class="project-link-container">
+<!-- 									<p class="early-development-notice">Early stages of development</p> -->
+									<a href="https://warp-zone.herokuapp.com/" target="_blank" class="live-site-button-link button-link-alt"><span class="live-site-link-text">More Info</span></a>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="project-item-container col-6 animated fadeInLeft delay-1000">
-						<div class="project-item project1-background">1
+						<div class="project-item project1-background">
 							<div class="project-item-content-container">
 								<h2 class="project-item-title">Warp Zone</h2>
+								<p><i>Aug 2018 - Sept 2018</i></p>
 								<p class="project-description-text">An application for users to research their next video game of interest along with their current sale prices.</p>
 								<div class="project-link-container">
 									<a href="https://github.com/avanichyanukroh/warp-zone" target="_blank" class="github-logo-link"></a>
@@ -80,9 +88,10 @@
 						</div>
 					</div>
 					<div class="project-item-container col-6 animated fadeInRight delay-1750">
-						<div class="project-item project3-background">4
+						<div class="project-item project3-background">
 							<div class="project-item-content-container">
 								<h2 class="project-item-title">circle.it</h2>
+								<p><i>Jun 2018 - Jul 2018</i></p>
 								<p class="project-description-text">A simple personal task management application design to help users manage their day to day tasks.</p>
 								<div class="project-link-container">
 									<a href="https://github.com/avanichyanukroh/circle.it" target="_blank" class="github-logo-link"></a>
@@ -92,9 +101,10 @@
 						</div>
 					</div>
 					<div class="project-item-container col-6 animated fadeInLeft delay-1500">
-						<div class="project-item project4-background">3
+						<div class="project-item project4-background">
 							<div class="project-item-content-container">
 								<h2 class="project-item-title">Flavorus</h2>
+								<p><i>Apr 2018 - May 2018</i></p>
 								<p class="project-description-text">An application for users to discover new movies and new tv shows based on a specific movie/tv show they love.</p>
 								<div class="project-link-container">
 									<a href="https://github.com/avanichyanukroh/Flavorus" target="_blank" class="github-logo-link"></a>
@@ -111,94 +121,107 @@
 				<h2 class="skills-section-title animated bounceInUp">Skills</h2>
 				<div class="col-12">
 					<div>
-						<div class="skill-bar-container">
+						<div class="skill-bar-container animated fadeIn delay-750">
 							<div class="skill-description-container">
 							</div>
 							<div class="skill-description-container">
-								<p class="skill-description">Beginner</p>
+								<p class="skill-level-description first-skill-level-description">Beginner</p>
 							</div>
 							<div class="skill-description-container">
-								<p class="skill-description">Inter</p>
+								<p class="skill-level-description">Intermediate</p>
 							</div>
 							<div class="skill-description-container">
-								<p class="skill-description">Proficent</p>
+								<p class="skill-level-description">Proficent</p>
 							</div>
 							<div class="skill-description-container">
-								<p class="skill-description">Advanced</p>
+								<p class="skill-level-description">Advanced</p>
 							</div>
-							<div class="skill-description-container">
-								<p class="skill-description">Expert</p>
-							</div>
+<!-- 							<div class="skill-description-container">
+								<p class="skill-level-description">Expert</p>
+							</div> -->
 						</div>
 						<div class="skill-bar-container">
 							<div class="skill-description-container">
-								<p class="skill-description">HTML</p>
+								<p class="skill-description animated fadeIn delay-750">HTML</p>
 							</div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description">CSS</p>
-							</div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1250"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1500"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1750"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 						</div>
 						<div class="skill-bar-container">
 							<div class="skill-description-container">
-								<p class="skill-description">JavaScript</p>
+								<p class="skill-description animated fadeIn delay-750">CSS</p>
 							</div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1250"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1500"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 						</div>
 						<div class="skill-bar-container">
 							<div class="skill-description-container">
-								<p class="skill-description">React</p>
+								<p class="skill-description animated fadeIn delay-750">JavaScript</p>
 							</div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1250"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1500"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1750"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 						</div>
 						<div class="skill-bar-container">
 							<div class="skill-description-container">
-								<p class="skill-description">Node.js</p>
+								<p class="skill-description animated fadeIn delay-750">React</p>
 							</div>
-							<div class="skill-bar bar-fill"></div>
-							<div class="skill-bar bar-fill"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1250"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1500"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1750"></div>
+							<div class="skill-bar"></div>
+							<div class="skill-bar"></div>
+						</div>
+						<div class="skill-bar-container">
+							<div class="skill-description-container">
+								<p class="skill-description animated fadeIn delay-750">Node.js</p>
+							</div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1250"></div>
+							<div class="skill-bar bar-fill animated fadeInRight delay-1500"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 							<div class="skill-bar"></div>
 						</div>
 					</div>
-					<div>
-						Other skills
-					</div>
-					<div>
-						Front End frameworks/librarys: jQuery, Redux, Enzyme
-					</div>
-					<div>
-						Back End frameworks/librarys: Express, MongoDB, Mongoose, Mocha, Chai
-					</div>
-					<div>
-						Tools: GitHub, Postman, Chrome DevTools, MLab, Heroku, TravisCI
+					<div class="animatedParent animated fadeIn delay-2500">
+						<div>
+							<h3>Other skills</h3>
+						</div>
+						<div>
+							<p><strong>Front End frameworks/librarys:</strong> jQuery, Redux, Enzyme</p>
+						</div>
+						<div>
+							<p><strong>Back End frameworks/librarys:</strong> Express, MongoDB, Mongoose, Mocha, Chai</p>
+						</div>
+						<div>
+							<p><strong>Tools:</strong> GitHub, Postman, Chrome DevTools, MLab, Heroku, TravisCI</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-	<footer role="content-info">
-		Footer
+	<footer role="contentinfo">
+		<div class="footer-content-container animatedParent animateOnce">
+			<a href="https://github.com/avanichyanukroh" target="_blank" class="footer-links animated fadeIn delay-2500">
+				<img src="images/github-logo.png" alt="github icon" class="github-footer-icon">
+			</a>
+			<a href="https://www.linkedin.com/in/anawin-vanichyanukroh-5b146813b/" target="_blank" class="footer-links animated fadeIn delay-2500">
+				<img src="images/linkedin-icon.png" alt="linkedin icon">
+			</a>
+			<a href="mailto:avanichyanukroh@gmail.com?Subject=Hello Anawin!" target="_top" class="mailto-link footer-links animated fadeIn delay-2500">
+				<i class="far fa-envelope fa-2x" alt="mail to icon"></i>
+			</a>
+			<p class="copyright animated fadeIn delay-2500">Hand crafted by <br> &copy; Anawin Vanichyanukroh</p>
+		</div>
 	</footer>
 	<script src="css3-animate-it.js"></script>
 </body>

@@ -28,7 +28,6 @@
 body {
 	font-family: "Open Sans", sans-serif; 
 	font-size: 20px;
-	color: #444;
 	text-align: center;
 	line-height: 1.5;
 	margin: 0;
@@ -44,6 +43,10 @@ nav {
 	color: white;
 	opacity: .9;
 	box-shadow: 0 5px 15px rgba(255, 255, 255, .3);
+}
+
+a {
+	text-decoration: none;
 }
 
 .nav-link {
@@ -143,10 +146,10 @@ h2 {
 }
 
 .project2-background {
-	background-image: url("images/desktop-background.jpg");
+	background-image: url("images/sabai-screenshot.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 50%;
+	background-position: 0;
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -226,6 +229,11 @@ h2 {
 	padding: 0;
 }
 
+.early-development-notice {
+	display: inline-block;
+	font-size: 15px;
+}
+
 .github-logo-link {
 	display: inline-block;
 	float: left;
@@ -266,6 +274,11 @@ h2 {
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.button-link-alt {
+	margin: 0 auto !important;
+	float: none !important; 
+}
+
 .live-site-button-link:hover {
 	background-color: rgba(0, 122, 255, .8);
 }
@@ -288,8 +301,7 @@ h2 {
 .skill-bar-container {
 	display: inline-block;
 	height: 50px;
-	width: 602px;
-	border: 1px solid black;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -297,9 +309,17 @@ h2 {
 .skill-description-container {
 	display: table;
 	height: 50px;
-	width: 100px;
-	border: 1px solid black;
+	width: 20%;
 	float: left;
+}
+
+.first-skill-level-description {
+	border-left: 2px solid black;
+}
+
+.skill-level-description {
+	font-size: 15px;
+	border-right: 2px solid black;
 }
 
 .skill-description {
@@ -310,20 +330,63 @@ h2 {
 .skill-bar {
 	display: inline-block;
 	height: 50px;
-	width: 100px;
+	width: 20%;
 	margin: 0;
 	padding: 0;
 	float: left;
 }
 
 .bar-fill {
-	background-color: #8DC639;
-	border: 1px solid black;
-	border-radius: 15px;
+	background-color: #642FF9;
+/*	border: 1px solid black;
+	border-radius: 15px;*/
 }
 
 footer {
 	background-color: #39373A;
+	color: white;
+	height: 65px;
+	padding: 0 15px;
+}
+
+.footer-content-container {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.footer-links {
+	display: inline-block;
+	padding: 14px 45px;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.footer-links:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+
+.footer-links:active {
+	transform: translateY(2px);
+}
+
+.github-footer-icon {
+	height: 30px;
+	width: 30px;
+	filter: invert(100%);
+}
+
+.copyright {
+	display: inline-block;
+	float: right;
+	font-size: 14px;
+}
+
+.mailto-link {
+	display: inline-block;
+	text-decoration: none;
 	color: white;
 }
 
@@ -336,25 +399,47 @@ footer {
 	header {
 		padding: 16% 0;
 	}
+
 	section {
 		min-height: 250px;
 		padding-left: 3%;
 		padding-right: 3%; 
 	}
+
 	h1 {
 		font-size: 22px;
 	}
+
 	h2 {
 		font-size: 18px;
 	}
+
 	.project-item-container {
 		margin: 10px 0 10px;
 	}
+
 	p, a, .live-site-button-link {
 		font-size: 12px;
 	}
+
+	.skill-level-description {
+		font-size: 10px;
+	}
+
 	.github-logo-link-link {
 		height: 30px;
 		width: 30px;
+	}
+
+	.footer-links {
+		padding: 14px 5px;
+	}
+
+	.mailto-link {
+		font-size: 18px;
+	}
+
+	.copyright {
+		font-size: 10px;
 	}
 }
