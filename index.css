@@ -378,6 +378,12 @@ footer {
 	filter: invert(100%);
 }
 
+.resume-icon {
+	display: inline-block;
+	height: 36px;
+	width: auto;
+}
+
 .copyright {
 	display: inline-block;
 	float: right;
@@ -426,18 +432,20 @@ footer {
 		font-size: 10px;
 	}
 
-	.github-logo-link-link {
+	.github-logo-link {
 		height: 30px;
 		width: 30px;
 	}
 
 	.footer-links {
-		padding: 14px 5px;
+		padding: 14px 6px;
+
 	}
 
 	.mailto-link {
 		font-size: 18px;
 	}
+
 
 	.copyright {
 		font-size: 10px;
