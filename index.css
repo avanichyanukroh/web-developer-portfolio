@@ -31,8 +31,13 @@ body {
 	text-align: center;
 	line-height: 1.5;
 	margin: 0;
+	overflow-x: hidden;
 }
 
+p {
+	margin: 0;
+	padding: 0;
+}
 nav {
 	position: fixed;
 	top: 0;
@@ -91,7 +96,7 @@ header {
 }
 
 section {
-	min-height: 800px;
+	min-height: 650px;
 	padding: 2% 0 4%;
 	background-color: #bbb;
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -103,7 +108,9 @@ h2 {
 }
 
 .about-me-section {
-	background-color: #39373A;
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: white;
 }
 
@@ -113,7 +120,9 @@ h2 {
 }
 
 .portfolio-section {
-	background-color: #E39F1C;
+	background: #E39F1C;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FAC212, #E39F1C);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FAC212, #E39F1C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .portfolio-section-title {
@@ -206,13 +215,23 @@ h2 {
 	-webkit-transform: scale(0.8, 0.8);
 	transform: scale(0.8, 0.8);
 	color: white;
-	padding: 0 5%;
+	padding: 15px 2%;
 	width: 100%;
 	opacity: 0;
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.project-item-title {
+	margin: 0;
+}
+
+.tech-logo {
+	margin: 10px 5px 10px;
+	padding: 0;
+	height: 48px;
+	width: auto;
+}
 .project-description-text {
 	height: 125px;
 }
@@ -290,7 +309,10 @@ h2 {
 }
 
 .skills-section {
-	background-color: #7FB0A6;
+background: #1D976C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .skills-section-title {
@@ -345,20 +367,22 @@ h2 {
 footer {
 	background-color: #39373A;
 	color: white;
-	height: 65px;
+	height: 64px;
 	padding: 0 15px;
 }
 
 .footer-content-container {
 	display: inline-block;
-	height: 100%;
+	height: inherit;
 	width: 100%;
 	text-align: center;
+	vertical-align: center;
+	padding-top: 10px;
 }
 
 .footer-links {
 	display: inline-block;
-	padding: 14px 45px;
+	margin-right: 100px;
 	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -376,12 +400,7 @@ footer {
 	height: 30px;
 	width: 30px;
 	filter: invert(100%);
-}
-
-.resume-icon {
-	display: inline-block;
-	height: 36px;
-	width: auto;
+	padding-top: 3px;
 }
 
 .copyright {
@@ -394,16 +413,23 @@ footer {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
+	margin-bottom: 5px;
 }
 
+/*mobile sizes*/
 @media only screen and (max-width: 640px) {
 
+	.nav-link {
+		margin: 0 0;
+		padding: 3% 3% 3%;
+	}
+
 	.background-image {
-		background-size: contain;
+		background-size: auto 40%;
 	}
 
 	header {
-		padding: 16% 0;
+		padding: 16% 3%;
 	}
 
 	section {
@@ -413,32 +439,44 @@ footer {
 	}
 
 	h1 {
-		font-size: 22px;
+		font-size: 24px;
 	}
 
 	h2 {
-		font-size: 18px;
+		font-size: 20px;
 	}
 
 	.project-item-container {
 		margin: 10px 0 10px;
 	}
 
+	.project-item-content-container {
+		padding-top: 25px;
+	}
+
+	.project-item-content-container p {
+		font-size: 18px;
+	}
+
 	p, a, .live-site-button-link {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.skill-level-description {
 		font-size: 10px;
 	}
 
+	.footer-content-container {
+		padding-top: 14px;
+	}
+
 	.github-logo-link {
-		height: 30px;
-		width: 30px;
+		height: 34px;
+		width: 34px;
 	}
 
 	.footer-links {
-		padding: 14px 6px;
+		margin-right: 25px;
 
 	}
 
@@ -449,5 +487,88 @@ footer {
 
 	.copyright {
 		font-size: 10px;
+	}
+}
+
+/*Ipad sizes*/
+@media only screen and (max-width: 1366px) and (min-width: 640px) {
+
+	section {
+		padding-bottom: 150px;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 60px;
+	}
+
+	p, a, .live-site-button-link {
+		font-size: 32px;
+	}
+
+	.tech-logo {
+		height: 85px;
+	}
+
+	.project-link-container {
+		margin-top: 150px;
+	}
+
+	.github-logo-link {
+		height: 70px;
+		width: 70px;
+	}
+
+	.live-site-button-link {
+		height: 70px;
+		width: 180px;
+	}
+
+
+	.project-item-container {
+		height: 1000px;
+		margin: 45px 0 45px;
+	}
+
+	.project-item-content-container p {
+		font-size: 42px;
+	}
+
+	.project-item-content-container {
+		padding-top: 220px;
+	}
+
+	.skill-level-description {
+		font-size: 18px;
+	}
+
+	footer {
+		height: 100px;
+	}
+
+	.footer-content-container {
+		padding-top: 25px;
+	}
+
+	.github-footer-icon {
+		height: 45px;
+		width: 45px;
+		filter: invert(100%);
+		padding-top: 3px;
+	}
+
+	.linkedin-logo {
+		transform: scale(1.6, 1.6);
+	}
+
+	.mailto-link {
+		font-size: 28px;
+	}
+
+	.copyright {
+		font-size: 18px;
 	}
 }

@@ -32,7 +32,7 @@
 
 
 /* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1366px) {
 	/* 3 columns, 3/12 in % */
 	.col-3, .col-3-alt {
 		width: 25%;
