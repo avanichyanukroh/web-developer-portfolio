@@ -450,9 +450,27 @@ footer {
 		margin: 10px 0 10px;
 	}
 
+	.project-brackground {
+	opacity: 1;
+	}
+
 	.project-item-content-container {
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		background-color: rgba(0, 0, 0, .7);
+		background-blend-mode: multiply;
+		z-index: 4;
 		opacity: 1;
 		padding-top: 25px;
+		height: 348px;
+	}
+
+	.project1-background:hover, .project2-background:hover, .project3-background:hover, .project4-background:hover {
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		background-color: rgba(0, 0, 0, .7);
+		background-blend-mode: multiply;
+		z-index: 4;
 	}
 
 	.project-item-content-container p {
@@ -539,8 +557,26 @@ footer {
 	}
 
 	.project-item-content-container {
+
+	}
+
+	.project-item-content-container {
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		background-color: rgba(0, 0, 0, .7);
+		background-blend-mode: multiply;
+		z-index: 4;
 		opacity: 1;
+		height: 1000px;
 		padding-top: 220px;
+	}
+
+	.project1-background:hover, .project2-background:hover, .project3-background:hover, .project4-background:hover {
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		background-color: rgba(0, 0, 0, .7);
+		background-blend-mode: multiply;
+		z-index: 4;
 	}
 
 	.skill-level-description {
