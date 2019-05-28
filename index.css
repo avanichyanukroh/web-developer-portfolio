@@ -22,7 +22,12 @@
 
 .hero-title {
 	color: white;
-	text-shadow: 2px 5px 10px rgba(0, 0, 0, .9);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .9);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 body {
@@ -85,9 +90,14 @@ a[id="skills-section"]:target ~ #main section.skills-section {
 }
 
 header {
-	padding: 26% 0;
 	font-family: 'Open Sans', sans-serif;
-	color: white;
+    color: white;
+    position: relative;
+    height: 100vh;
+}
+
+.hero-text {
+    margin-bottom: 16px;
 }
 
 .full-name-display {
@@ -103,10 +113,6 @@ section {
 	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-h2 {
-	margin-bottom: 8%;
-}
-
 .about-me-section {
 	background: #000000;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
@@ -117,6 +123,13 @@ h2 {
 .about-me-section-title {
 	color: #E39F1C;
 	text-shadow: 2px 5px 10px rgba(0, 0, 0, .8);
+}
+
+.self-portrait {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .portfolio-section {
