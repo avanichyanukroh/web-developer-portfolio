@@ -14,14 +14,17 @@
 	<link rel="stylesheet" type="text/css" href="animations.css">
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	<nav role="navigation" class="animatedParent animateOnce">
 		<a href="#about-me-section" class="nav-link animated flipInX">About Me</a>
-		<a href="#portfolio-section" class="nav-link animated flipInX delay-250">Porfolio</a>
-		<a href="#skills-section" class="nav-link animated flipInX delay-500">Skills</a>
-		<a href="https://drive.google.com/file/d/18BUs77d-RKYUTo58CigOWn-OW9gN0Mhx/view?usp=sharing" target="_blank" class="nav-link animated flipInX delay-750">
+		<a href="#career-path-section" class="nav-link animated flipInX delay-250">Education & Career Path</a>
+		<a href="#portfolio-section" class="nav-link animated flipInX delay-500">Projects</a>
+		<a href="https://drive.google.com/file/d/1lVhrSofHHzTObOLu9Cu5NvKKopyglOyl/view?usp=share_link" target="_blank" class="nav-link-resume animated flipInX delay-750">
 			Resume
 		</a>
 	</nav>
@@ -32,250 +35,323 @@
 	<main role="main" id="main">
 		<header role="banner">
 			<h1 class="hero-title animatedParent">
-				<div class="hero-text animated flipInX slower">Hello, I'm <div class="hero-text full-name-display animated pulse delay-3000">Anawin Vanichyanukroh</div>.</div>
-				<div class="hero-text animated flipInX slower delay-1250">I'm a Software Engineer.</div>
+				<div class="hero-text hero-intro-text animated flipInX slower">Hi, my name is</div>
+					<div class="hero-text hero-full-name-text animated flipInX delay-1250">Anawin Vanichyanukroh.</div>
+				<div class="hero-text hero-description-text animated flipInX slower delay-3000">Software Engineer based in California</div>
 			</h1>
 		</header>
 
-		<section class="about-me-section" id="about-me-section">
-			<div class="row animatedParent">
-                <h2 class="about-me-section-title animated growIn">About Me</h2>
-                <img class="self-portrait" src="./images/self-portrait.jpg" alt="self portrait">
-				<div class="animated fadeIn delay-750">
-					<p>I am a Los Angeles/Orange County-based Software Engineer.</p>
+		<section id="about-me-section">
+			<h2 class="section-title">About Me</h2>
+			<div class="about-me-section">
+				<div class="about-me-paragraph">
+					<div class="">
+						<p>Hello! My name is Anawin, I am a Los Angeles/Orange County-based Software Engineer.</p>
+					</div>
+					<br>
+					<div class="">
+						<p>
+						Growing up, I have always been fascinated in the realms of science and art. This led me to persue
+						engineering as a career and learn many different art forms as a hobby like graphic design, music, and dance.
+						Once I became introduced to software and web development, I absolutely knew this was something I wanted to persue.
+						<br><br>
+						I have had an incredible journey so far. I developed a strong foundation from Thinkful's full Stack Web Development Program and
+						right after completing that program I joined my first Hackathon in LA with a few other new aspiring engineers/developers.
+						I have had the pleasure of working at a small start-up company, Sabai Software, where we had to build everything from the ground up
+						to a big company, LegalZoom, where their processes and codebase have been refined through many years.
+						<br><br>
+						When I'm not coding, I find interests in
+						playing and creating music,
+						watching and playing sports,
+						playing team oriented and high-level strategic video games,
+						and exploring the great outdoors.
+						
+						I also love sharing new experiences, discoveries, laughs, and smiles.
+						</p>
+					</div>
 				</div>
-                <br>
-				<div class="animated fadeIn delay-1500">
-					<p>
-					I pride myself in self-discipline, thirst for efficiency, and writing clean, testable code.
-					In my free time, I am currently researching new tools to add to my arsenal,
-					from tips and tricks to advance UI/UX designs to learning new frameworks and libraries.
+				<div>
+					<div class="self-portrait-container">
+						<div class="self-portrait-effect"></div>
+						<img class="self-portrait" src="./images/anawin-and-mozzie-square.jpg" alt="self portrait">
+					</div>
+				</div>
+			</div>
+		</section>
 
-					When I'm not coding, I find interests in
-					playing and creating music,
-					watching and playing sports,
-					playing team oriented and high-level strategic video games,
-					and exploring the great outdoors.
-					
-					I also love sharing experiences, new discoveries, laughs, and smiles.
-					Feel free to contact me or browse some of my projects using the links below.
-					</p>
+		<section id="career-path-section">
+			<h2 class="section-title">Education & Career Path</h2>
+			<div class="career-path-section">
+				<ul class="timeline">
+					<li onclick="selectTimeline(event, 'csulb')" class="timeline-item active" data-year="2017" data-text="CSULB"></li>
+					<li onclick="selectTimeline(event, 'thinkful')" class="timeline-item" data-year="2018" data-text="Thinkful"></li>
+					<li onclick="selectTimeline(event, 'sabai')" class="timeline-item" data-year="2018" data-text="Sabai Software"></li>
+					<li onclick="selectTimeline(event, 'legalzoom')" class="timeline-item" data-year="2020" data-text="LegalZoom"></li>
+					<li onclick="selectTimeline(event, 'intermedia')" class="timeline-item" data-year="2021" data-text="InterMedia"></li>
+				</ul>
+				<div class="timeline-content animatedParent">
+					<div class="timeline-content-item hidden animated" id="csulb">
+						<h3 class="timeline-content-title">California State University Long Beach</h3>
+						<p>
+							Graduated with a bachelors of science in Mechanical Engineering. Unhappy with jobs that were available in this discipline, 
+							I recalled being introduced to web development and made the decision to persue this as a career.
+						</p>
+					</div>
+					<div class="timeline-content-item hidden animated" id="thinkful">
+						<h3 class="timeline-content-title">Thinkful Full Stack Web Development Program</h3>
+						<p>
+							A 6 months Full Stack Web Development Program where I learned full stack web development that had 1:1 sessions with an assigned instructor.
+							Every milestone had a mock interview that must be taken and passed to move onto the next.
+							<ul class="project-tech-list">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JQuery</li>
+								<li>MongoDB</li>
+								<li>Heroku</li>
+								<li>Mocha & Chai</li>
+								<li>Enzyme</li>
+								<li>Postman</li>
+								<li>Algorithms</li>
+							</ul>
+						</p>
+					</div>
+					<div class="timeline-content-item hidden animated" id="sabai">
+						<h3 class="timeline-content-title">Sabai Software</h3>
+						<p>
+							Start-up company developing an app for doctors and therapists to manage analytics and reports for each of their clients.
+							Helped designed and developed features to allow clients to set goals, log short journals, and current moods. Also included features
+							for the practioners to manage analytics and data for their clients to better help them.
+							<ul class="project-tech-list">
+								<li>React</li>
+								<li>Redux</li>
+								<li>Node.js</li>
+								<li>Express</li>
+								<li>Sequelize</li>
+								<li>Mocha & Chai</li>
+								<li>Enzyme</li>
+								<li>Travis CI</li>
+								<li>Material-UI</li>
+								<li>Figma</li>
+								<li>Git/Github</li>
+							</ul>
+						</p>
+					</div>
+					<div class="timeline-content-item hidden animated" id="legalzoom">
+						<h3 class="timeline-content-title">LegalZoom</h3>
+						<p>
+							A disruptive innovator in the market for legal services. LegalZoom leverages technology to make legal services affordable and accessible to all.
+							While working there, I led quality for a new business feature Global Checkout, by creating/maintaining test suites, plans, and automation. I also 
+							Spearheaded 100+ releases and hotfixes across different teams, designed and developed specialized test automation for Optimizely A/B testing and Cookie Consent testing,
+							and created easy-to-use Jenkins builds that run specific test automation suites for the QA team to use.
+							<ul class="project-tech-list">
+								<li>.NET</li>
+								<li>C#</li>
+								<li>SQL</li>
+								<li>Selenium</li>
+								<li>NUnit</li>
+								<li>Saucelab</li>
+								<li>Jenkins</li>
+								<li>Git/Github</li>
+							</ul>
+						</p>
+					</div>
+					<div class="timeline-content-item hidden animated" id="intermedia">
+						<h3 class="timeline-content-title">Intermedia Cloud Communications</h3>
+						<p>
+							A cloud communications company that helps businesses connect better through voice, video conferencing, chat, contact center, file sharing, and more. 
+							I worked specifically with their video conferencing software called AnyMeeting building features like large video conference to support over 100 attendees, compact floating widget,
+							themes feature, Oracle's digital assistant, and various audio/video features. The team was also in the process of slowly upgrading our codebase from AngularJS to Angular10+.
+							<ul class="project-tech-list">
+								<li>AngularJS</li>
+								<li>Angular10+</li>
+								<li>TypeScript</li>
+								<li>NodeJS</li>
+								<li>Karma & Jasmine</li>
+								<li>LESS</li>
+								<li>WebRTC</li>
+								<li>Bootstrap</li>
+								<li>Bitbucket</li>
+								<li>Figma</li>
+								<li>Jenkins</li>
+							</ul>
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="portfolio-section" id="portfolio-section">
 			<div class="row animatedParent">
-				<h2 class="portfolio-section-title animated growIn">Portfolio</h2>
-					<div class="project-item-container col-6 animated fadeInLeft delay-1250">
-						<div class="project-item project2-background">
-							<div class="project-item-content-container">
-								<h2 class="project-item-title">Sabai</h2>
-								<p><i>Sept 2018 - Current</i></p>
-								<div class="tech-logo-container">
-									<img class="tech-logo" src="images/html5-logo.png">
-									<img class="tech-logo" src="images/css3-logo.png">
-									<img class="tech-logo" src="images/javascript-logo.png">
-									<img class="tech-logo" src="images/react-logo.png">
-									<img class="tech-logo" src="images/nodejs-logo.png">
-								</div>
-								<p class="project-description-text">A web application that helps health practitioners log patient data. <br><i>(Closed Alpha Testing Stage)</i></p>
-								<div class="project-link-container">
-									<a href="https://www.facebook.com/pg/sabaisoftware/about/?ref=page_internal" target="_blank" class="more-info-link live-site-button-link button-link-alt"><span class="live-site-link-text">More Info</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project-item-container col-6 animated fadeInLeft delay-1000">
-						<div class="project-item project1-background">
-							<div class="project-item-content-container">
-								<h2 class="project-item-title">Warp Zone</h2>
-								<p><i>Aug 2018 - Current</i></p>
-								<div class="tech-logo-container">
-									<img class="tech-logo" src="images/html5-logo.png">
-									<img class="tech-logo" src="images/css3-logo.png">
-									<img class="tech-logo" src="images/javascript-logo.png">
-									<img class="tech-logo" src="images/react-logo.png">
-									<img class="tech-logo" src="images/nodejs-logo.png">
-								</div>
-								<p class="project-description-text">An application for users to research their next video game of interest along with their current sale prices.</p>
-								<div class="project-link-container">
-									<div class="github-info-container">
-										<a href="https://github.com/avanichyanukroh/warp-zone-2.0" target="_blank">
-											<span class="github-logo-link"></span>
-											<p class="github-link-label">Client</p>
-										</a>
-									</div>
-									<div class="github-info-container">
-										<a href="https://github.com/avanichyanukroh/warp-zone-api" target="_blank">
-											<span class="github-logo-link"></span>
-											<p class="github-link-label">Server</p>
-										</a>
-									</div>
-									<!-- <a href="https://warp-zone.herokuapp.com/" target="_blank" class="live-site-button-link"><span class="live-site-link-text">Live Page</span></a> -->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project-item-container col-6 animated fadeInLeft delay-1750">
-						<div class="project-item project3-background">
-							<div class="project-item-content-container">
-								<h2 class="project-item-title">circle.it</h2>
-								<p><i>Jun 2018 - Jul 2018</i></p>
-								<div class="tech-logo-container">
-									<img class="tech-logo" src="images/html5-logo.png">
-									<img class="tech-logo" src="images/css3-logo.png">
-									<img class="tech-logo" src="images/javascript-logo.png">
-									<img class="tech-logo" src="images/jquery-logo.png">
-									<img class="tech-logo" src="images/nodejs-logo.png">
-								</div>
-								<p class="project-description-text">A simple personal task management application design to help users manage their day to day tasks.</p>
-								<div class="project-link-container">
-									<div class="github-info-container-long">
-										<a href="https://github.com/avanichyanukroh/circle.it" target="_blank">
-											<span class="github-logo-link"></span>
-											<p class="github-link-label">Client+Server</p>
-										</a>
-									</div>
-									<!-- <a href="https://circleitmvp.herokuapp.com/users/login" target="_blank" class="live-site-button-link"><span class="live-site-link-text">Live Page</span></a> -->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project-item-container col-6 animated fadeInLeft delay-1500">
-						<div class="project-item project4-background">
-							<div class="project-item-content-container">
-								<h2 class="project-item-title">Flavorus</h2>
-								<p><i>Apr 2018 - May 2018</i></p>
-								<div class="tech-logo-container">
-									<img class="tech-logo" src="images/html5-logo.png">
-									<img class="tech-logo" src="images/css3-logo.png">
-									<img class="tech-logo" src="images/javascript-logo.png">
-									<img class="tech-logo" src="images/jquery-logo.png">
-								</div>
-								<p class="project-description-text">An application for users to discover new movies and new tv shows based on a specific movie/tv show they love.</p>
-								<div class="project-link-container">
-									<div class="github-info-container-long">
-										<a href="https://github.com/avanichyanukroh/Flavorus" target="_blank">
-											<span class="github-logo-link"></span>
-											<p class="github-link-label">Client Only</p>
-										</a>
-									</div>
-									<a href="https://avanichyanukroh.github.io/Flavorus/" target="_blank" class="live-site-button-link"><span class="live-site-link-text">Live Page</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-		</section>
+				<h2 class="section-title">Things I have built</h2>
 
-		<section class="skills-section" id="skills-section">
-			<div class="row animatedParent">
-				<h2 class="skills-section-title animated growIn">Skills</h2>
-				<div class="col-12">
-					<div>
-						<div class="skill-bar-container animated fadeIn delay-750">
-							<div class="skill-description-container">
+				<ul class="projects-grid">
+
+					<li class="project-item">
+						<div class="project-inner">
+							<div>
+								<div class="project-top">
+									<div class="folder">
+										<svg class="folder-icon" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 490 490">
+											<path d="M455.606,353.833l-45.607-45.608c0,0-0.003-193.62-0.014-193.873c-0.149-3.519-1.511-6.723-3.677-9.207  c-0.003-0.003-0.005-0.006-0.008-0.009c-0.003-0.003-0.007-0.008-0.01-0.012c-0.22-0.25-101.517-101.504-101.518-101.504  c-2.474-2.126-5.646-3.46-9.128-3.607C295.393,0.003,95.001,0,95.001,0c-8.284,0-15,6.716-15,15v65H45c-8.284,0-15,6.716-15,15v380  c0,8.284,6.716,15,15,15h400c8.284,0,15-6.716,15-15V364.44C460,360.462,458.42,356.646,455.606,353.833z M310,51.213L358.786,100  H310V51.213z M110.001,30H280v85c0,8.284,6.716,15,15,15h84.999v148.225L186.169,84.394C183.355,81.581,179.541,80,175.562,80  h-65.561V30z M430,460H60V110h109.349L430,370.653V460z"/>
+										</svg>
+									</div>
+									<div class="project-links">
+										<a class="project-link" href="https://github.com/avanichyanukroh/warp-zone-2.0" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">Client</div>
+										</a>
+										<a class="project-link" href="https://github.com/avanichyanukroh/warp-zone-api" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">API</div>
+										</a>
+									</div>
+								</div>
+								<h3 class="project-title">
+									<a>WarpZone</a>
+								</h3>
+								<div class="project-description">
+									<p>An application for users to research their next video game of interest along with their current sale prices.</p>
+								</div>
 							</div>
-							<div class="skill-description-container">
-								<p class="skill-level-description first-skill-level-description">Beginner</p>
+							<div>
+								<ul class="project-tech-list">
+									<li>React</li>
+									<li>Redux</li>
+									<li>Node.js</li>
+								</ul>
 							</div>
-							<div class="skill-description-container">
-								<p class="skill-level-description">Intermediate</p>
+						</div>
+					</li>
+
+					<li class="project-item">
+						<div class="project-inner">
+							<div>
+								<div class="project-top">
+									<div class="folder">
+										<svg class="folder-icon" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 490 490">
+											<path d="M455.606,353.833l-45.607-45.608c0,0-0.003-193.62-0.014-193.873c-0.149-3.519-1.511-6.723-3.677-9.207  c-0.003-0.003-0.005-0.006-0.008-0.009c-0.003-0.003-0.007-0.008-0.01-0.012c-0.22-0.25-101.517-101.504-101.518-101.504  c-2.474-2.126-5.646-3.46-9.128-3.607C295.393,0.003,95.001,0,95.001,0c-8.284,0-15,6.716-15,15v65H45c-8.284,0-15,6.716-15,15v380  c0,8.284,6.716,15,15,15h400c8.284,0,15-6.716,15-15V364.44C460,360.462,458.42,356.646,455.606,353.833z M310,51.213L358.786,100  H310V51.213z M110.001,30H280v85c0,8.284,6.716,15,15,15h84.999v148.225L186.169,84.394C183.355,81.581,179.541,80,175.562,80  h-65.561V30z M430,460H60V110h109.349L430,370.653V460z"/>
+										</svg>
+									</div>
+									<div class="project-links">
+										<a class="project-link" href="https://github.com/avanichyanukroh/flashback" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">Client</div>
+										</a>
+										<a class="project-link" href="https://github.com/avanichyanukroh/flashback-api" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">API</div>
+										</a>
+									</div>
+								</div>
+								<h3 class="project-title">
+									<a>Flashback</a>
+								</h3>
+								<div class="project-description">
+									<p>A memory game that allows the user to memorize and match cards and receive a score based on accuracy and speed.</p>
+								</div>
 							</div>
-							<div class="skill-description-container">
-								<p class="skill-level-description">Proficent</p>
+							<div>
+								<ul class="project-tech-list">
+									<li>React Native</li>
+									<li>Node.js</li>
+									<li>Expo</li>
+								</ul>
 							</div>
-							<div class="skill-description-container">
-								<p class="skill-level-description">Advanced</p>
+						</div>
+					</li>
+
+					<li class="project-item">
+						<div class="project-inner">
+							<div>
+								<div class="project-top">
+									<div class="folder">
+										<svg class="folder-icon" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 490 490">
+											<path d="M455.606,353.833l-45.607-45.608c0,0-0.003-193.62-0.014-193.873c-0.149-3.519-1.511-6.723-3.677-9.207  c-0.003-0.003-0.005-0.006-0.008-0.009c-0.003-0.003-0.007-0.008-0.01-0.012c-0.22-0.25-101.517-101.504-101.518-101.504  c-2.474-2.126-5.646-3.46-9.128-3.607C295.393,0.003,95.001,0,95.001,0c-8.284,0-15,6.716-15,15v65H45c-8.284,0-15,6.716-15,15v380  c0,8.284,6.716,15,15,15h400c8.284,0,15-6.716,15-15V364.44C460,360.462,458.42,356.646,455.606,353.833z M310,51.213L358.786,100  H310V51.213z M110.001,30H280v85c0,8.284,6.716,15,15,15h84.999v148.225L186.169,84.394C183.355,81.581,179.541,80,175.562,80  h-65.561V30z M430,460H60V110h109.349L430,370.653V460z"/>
+										</svg>
+									</div>
+									<div class="project-links">
+										<a class="project-link" href="https://github.com/avanichyanukroh/Flavorus" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">Client</div>
+										</a>
+									</div>
+								</div>
+								<h3 class="project-title">
+									<a>Flavorus</a>
+								</h3>
+								<div class="project-description">
+									<p>An application for users to discover new movies and new tv shows based on a specific movie/tv show they love.</p>
+								</div>
 							</div>
-<!-- 							<div class="skill-description-container">
-								<p class="skill-level-description">Expert</p>
-							</div> -->
-						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description animated fadeIn delay-750">HTML</p>
+							<div>
+								<ul class="project-tech-list">
+									<li>JQuery</li>
+									<li>Javascript</li>
+								</ul>
 							</div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1250"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1500"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1750"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
 						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description animated fadeIn delay-750">CSS</p>
+					</li>
+
+					<li class="project-item">
+						<div class="project-inner">
+							<div>
+								<div class="project-top">
+									<div class="folder">
+										<svg class="folder-icon" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 490 490">
+											<path d="M455.606,353.833l-45.607-45.608c0,0-0.003-193.62-0.014-193.873c-0.149-3.519-1.511-6.723-3.677-9.207  c-0.003-0.003-0.005-0.006-0.008-0.009c-0.003-0.003-0.007-0.008-0.01-0.012c-0.22-0.25-101.517-101.504-101.518-101.504  c-2.474-2.126-5.646-3.46-9.128-3.607C295.393,0.003,95.001,0,95.001,0c-8.284,0-15,6.716-15,15v65H45c-8.284,0-15,6.716-15,15v380  c0,8.284,6.716,15,15,15h400c8.284,0,15-6.716,15-15V364.44C460,360.462,458.42,356.646,455.606,353.833z M310,51.213L358.786,100  H310V51.213z M110.001,30H280v85c0,8.284,6.716,15,15,15h84.999v148.225L186.169,84.394C183.355,81.581,179.541,80,175.562,80  h-65.561V30z M430,460H60V110h109.349L430,370.653V460z"/>
+										</svg>
+									</div>
+									<div class="project-links">
+										<a class="project-link" href="https://github.com/avanichyanukroh/circle.it" target="_blank">
+											<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+											<div class="project-link-label">Client</div>
+										</a>
+									</div>
+								</div>
+								<h3 class="project-title">
+									<a>Circle.it</a>
+								</h3>
+								<div class="project-description">
+									<p>A simple personal task management application design to help users manage their day to day tasks.</p>
+								</div>
 							</div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1250"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1500"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description animated fadeIn delay-750">JavaScript</p>
+							<div>
+								<ul class="project-tech-list">
+									<li>JQuery</li>
+									<li>Javascript</li>
+								</ul>
 							</div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1250"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1500"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1750"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
 						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description animated fadeIn delay-750">React</p>
-							</div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1250"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1500"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1750"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-						</div>
-						<div class="skill-bar-container">
-							<div class="skill-description-container">
-								<p class="skill-description animated fadeIn delay-750">Node.js</p>
-							</div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1250"></div>
-							<div class="skill-bar bar-fill animated fadeInLeft delay-1500"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-							<div class="skill-bar"></div>
-						</div>
-					</div>
-					<div class="animatedParent animated fadeIn delay-2500">
-						<div>
-							<h3>Other skills</h3>
-						</div>
-						<div>
-							<p><strong>Front End frameworks/librarys:</strong> .NET, Selenium, jQuery, Redux, Enzyme, Material-UI, Bulma</p>
-						</div>
-						<div>
-							<p><strong>Back End frameworks/librarys:</strong> Express, PostgresSQL, Sequelize, MongoDB, Mongoose, Mocha, Chai</p>
-						</div>
-						<div>
-							<p><strong>Tools:</strong> GitHub, NPM, Postman, Chrome DevTools, React & Redux Devtool, MLab, Heroku, TravisCI, Azure DevOps, SauceLab</p>
-						</div>
-					</div>
-				</div>
-			</div>
+					</li>
+				</ul>
 		</section>
 	</main>
 	<footer role="contentinfo">
 		<div class="footer-content-container animatedParent animateOnce">
-			<a href="https://github.com/avanichyanukroh" target="_blank" class="footer-links animated fadeIn delay-2500">
-				<img src="images/github-logo.png" alt="github icon" class="github-footer-icon">
-			</a>
-			<a href="https://www.linkedin.com/in/anawin-vanichyanukroh-5b146813b/" target="_blank" class="linkedin-logo footer-links animated fadeIn delay-2500">
-				<img src="images/linkedin-icon.png" alt="linkedin icon">
-			</a>
-			<a href="mailto:avanichyanukroh@gmail.com?Subject=Hello Anawin!" target="_top" class="mailto-link footer-links animated fadeIn delay-2500">
-				<i class="far fa-envelope fa-2x" alt="mail to icon"></i>
-			</a>
-			<p class="copyright animated fadeIn delay-2500">Hand crafted by <br> &copy; Anawin Vanichyanukroh</p>
+			<div class="footer-link-container">
+				<a href="https://github.com/avanichyanukroh" target="_blank" class="footer-links animated fadeIn">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+						<title>GitHub</title>
+						<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+					</svg>
+				</a>
+				<a href="https://www.linkedin.com/in/anawin-vanichyanukroh-5b146813b/" target="_blank" class="linkedin-logo footer-links animated fadeIn">
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+						<title>LinkedIn</title>
+						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+						<rect x="2" y="9" width="4" height="12"></rect>
+						<circle cx="4" cy="4" r="2"></circle>
+					</svg>
+				</a>
+				<a href="mailto:avanichyanukroh@gmail.com?Subject=Hello Anawin!" target="_top" class="mailto-link footer-links animated fadeIn">
+					<svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M67,148.7c11,5.8,163.8,89.1,169.5,92.1c5.7,3,11.5,4.4,20.5,4.4c9,0,14.8-1.4,20.5-4.4c5.7-3,158.5-86.3,169.5-92.1   c4.1-2.1,11-5.9,12.5-10.2c2.6-7.6-0.2-10.5-11.3-10.5H257H65.8c-11.1,0-13.9,3-11.3,10.5C56,142.9,62.9,146.6,67,148.7z"/><path d="M455.7,153.2c-8.2,4.2-81.8,56.6-130.5,88.1l82.2,92.5c2,2,2.9,4.4,1.8,5.6c-1.2,1.1-3.8,0.5-5.9-1.4l-98.6-83.2   c-14.9,9.6-25.4,16.2-27.2,17.2c-7.7,3.9-13.1,4.4-20.5,4.4c-7.4,0-12.8-0.5-20.5-4.4c-1.9-1-12.3-7.6-27.2-17.2l-98.6,83.2   c-2,2-4.7,2.6-5.9,1.4c-1.2-1.1-0.3-3.6,1.7-5.6l82.1-92.5c-48.7-31.5-123.1-83.9-131.3-88.1c-8.8-4.5-9.3,0.8-9.3,4.9   c0,4.1,0,205,0,205c0,9.3,13.7,20.9,23.5,20.9H257h185.5c9.8,0,21.5-11.7,21.5-20.9c0,0,0-201,0-205   C464,153.9,464.6,148.7,455.7,153.2z"/></g>
+					</svg>
+				</a>
+			</div>
+			<p class="copyright animated fadeIn delay-2500">Hand crafted by &copy; Anawin Vanichyanukroh</p>
 		</div>
 	</footer>
+	<script src="index.js" onload="selectTimeline(event, 'csulb', true)"></script>
 	<script src="css3-animate-it.js"></script>
 </body>
 </html>
